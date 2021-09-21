@@ -6,9 +6,11 @@ function App() {
     // State
     const [isRadio, setIsRadio] = useState(false);
     // Event
-
+    const checkBrand = (e) => setIsRadio(!isRadio);
     // Watch
-
+    useEffect(() => {
+        console.log(isRadio);
+    }, [isRadio]);
     // JSX
     return (
         <div className="App">
