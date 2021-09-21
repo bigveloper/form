@@ -26,6 +26,10 @@ function App() {
         console.log(fileUp);
     }, [fileUp]);
 
+    useEffect(() => {
+        console.log(selected);
+    }, [selected]);
+
     // JSX
     return (
         <div className="App">
