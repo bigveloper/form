@@ -8,6 +8,9 @@ function App() {
 
     // Event
     const onChange = (e) => setValue(e.target.value);
+    const onReset = () => {
+        setValue('');
+    };
 
     // Watch
     useEffect(() => {
@@ -18,6 +21,13 @@ function App() {
         <div className="App">
             <h1>TextArea</h1>
             <textarea value={value} onChange={onChange} />
+            <br />
+            <button type="submit" onClick={onSubmit}>
+                보내기
+            </button>
+            <button type="reset" onClick={onReset}>
+                Reset
+            </button>
         </div>
     );
 }
