@@ -20,9 +20,11 @@ function App() {
     return (
         <div className="App">
             <h1>TextArea</h1>
-            <textarea value={value} onChange={onChange} />
-            <br />
-            <button type="submit">보내기</button>
+            <form onSubmit>
+                <textarea value={value} onChange={onChange} />
+                <br />
+                <button onClick>submit</button>
+            </form>
             <button type="reset" onClick={onReset}>
                 Reset
             </button>
