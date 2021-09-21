@@ -22,9 +22,7 @@ function App() {
             <h1>TextArea</h1>
             <textarea value={value} onChange={onChange} />
             <br />
-            <button type="submit" onClick={onSubmit}>
-                보내기
-            </button>
+            <button type="submit">보내기</button>
             <button type="reset" onClick={onReset}>
                 Reset
             </button>
