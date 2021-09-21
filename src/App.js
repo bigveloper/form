@@ -5,12 +5,14 @@ import './App.css';
 function App() {
     // State
     const [value, setValue] = useState('');
+    const [fileUp, setFileUp] = useState('');
 
     // Event
     const onChange = (e) => setValue(e.target.value);
     const onReset = () => {
         setValue('');
     };
+    const onFile = (e) => setFileUp(e.target.value);
 
     // Watch
     useEffect(() => {
@@ -28,6 +30,9 @@ function App() {
             <button type="reset" onClick={onReset}>
                 Reset
             </button>
+            <hr />
+            <h1> File Upload </h1>
+            <input type="file" value={fileUp} onChange={onFile} />
         </div>
     );
 }
