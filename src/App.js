@@ -16,8 +16,20 @@ function App() {
         <div className="App">
             <h1> Radio </h1>
             <p>what is your favorite It company?</p>
-            Apple
-            <input type="radio" checked={isRadio} id="brand" name="brand" onChange={checkBrand} />
+            <label>
+                Apple
+                <input type="radio" checked={isRadio} id="brand1" name="brand" onChange={checkBrand} />
+            </label>
+            <br />
+            <label>
+                Amazon
+                <input type="radio" checked={isRadio} id="brand2" name="brand" onChange={checkBrand} />
+            </label>
+            <br />
+            <label>
+                MS
+                <input type="radio" checked={isRadio} id="brand3" name="brand" onChange={checkBrand} />
+            </label>
         </div>
     );
 }
