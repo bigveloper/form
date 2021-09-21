@@ -6,16 +6,23 @@ function App() {
     // State
     const [value, setValue] = useState('');
     const [fileUp, setFileUp] = useState('');
-    const [selected, setSelected] = useState([]);
-    const itCompany = ['FaceBook', 'MS', 'Apple', 'Aamazon', 'Hancom'];
-
+    const [selected, setSelected] = useState('');
+    const [selList, setSelList] = useState(['FaceBook', 'MS', 'Apple', 'Aamazon', 'Hancom']);
     // Event
     const onChange = (e) => setValue(e.target.value);
     const onReset = () => {
         setValue('');
     };
     const onFile = (e) => setFileUp(e.target.value);
-    const onSelect = (e) => setSelected(e.target.selected);
+
+    const onSelect = (index) => {
+        setSelList((prevState) => {
+            const selectList = prevState.filter((item, i) => {
+                return i === index && item;
+            });
+            return selectList;
+        });
+    };
 
     // Watch
     useEffect(() => {
@@ -47,11 +54,9 @@ function App() {
             <input type="file" value={fileUp} onChange={onFile} />
             <hr />
             <h1> SelectBox </h1>
-            <select value={selected} onSelect={onSelect}>
-                {itCompany.map((item) => (
-                    <option value={item} key={item}>
-                        {item}
-                    </option>
+            <select value={selected} onChange={onSelect}>
+                {selList.map((item, index) => (
+                    <option key={index}>{item}</option>
                 ))}
             </select>
         </div>
