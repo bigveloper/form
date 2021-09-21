@@ -6,13 +6,18 @@ function App() {
     // State
     const [isRadio, setIsRadio] = useState(false);
     const [isChecked, setIsChecked] = useState(false);
+
     // Event
     const checkBrand = (e) => setIsRadio(!isRadio);
     const checkFw = (e) => setIsChecked(!isChecked);
+
     // Watch
     useEffect(() => {
         console.log(isRadio);
     }, [isRadio]);
+    useEffect(() => {
+        console.log(isChecked);
+    }, [isChecked]);
 
     // JSX
     return (
