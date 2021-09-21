@@ -18,6 +18,10 @@ function App() {
     useEffect(() => {
         console.log(value);
     }, [value]);
+
+    useEffect(() => {
+        console.log(fileUp);
+    }, [fileUp]);
     // JSX
     return (
         <div className="App">
