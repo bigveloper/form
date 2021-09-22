@@ -5,13 +5,16 @@ import './App.css';
 function App() {
     // State
     const [tdSelect, setTdSelect] = useState('');
-    const languageList = ['JavaScript', 'HTML', 'CSS'];
+    const languageList = ['JavaScript', 'HTML', 'CSS', 'Java', 'Python'];
 
     // Event
-    const tdClick = (e) => {
+    // const tdClick = (e) => {
+    //     setTdSelect(e.target.value);
+    //     return;
+    // };
+    const onSubmit = (e) => {
         setTdSelect(e.target.value);
-        console.log(tdSelect);
-        return;
+        e.preventDefault();
     };
 
     // watch
@@ -22,16 +25,17 @@ function App() {
 
     //JSX
     return (
-        <div>
+        <form onSubmit={onSubmit}>
             <p>select box</p>
-            <select value={tdSelect} onChange={tdClick}>
+            <select value={tdSelect} onChange={onSubmit}>
                 {languageList.map((item) => (
                     <option value={item} key={item}>
                         {item}
                     </option>
                 ))}
             </select>
-        </div>
+            <input type="submit" value="Submit" />
+        </form>
     );
 }
 
