@@ -19,10 +19,16 @@ function App() {
 
     //JSX
     return (
-        <div>
-            <p> Radio </p>
-            <input type="radio" value={isRadio} id="radio" onChange={clickOnRadio} />
-        </div>
+        <form>
+            <p>Fruit</p>
+            <label>
+                <input type="radio" name="fruit" value="apple" /> Apple
+            </label>
+            <label>
+                <input type="radio" name="fruit" value="banana" /> Banana
+            </label>
+            <input type="submit" value="Submit" /> <input type="reset" value="Reset" />
+        </form>
     );
 }
 
