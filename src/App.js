@@ -4,7 +4,7 @@ import './App.css';
 // Component
 function App() {
     // State
-    const [isRadio, setIsRadio] = useState(false);
+    const [isRadio, setIsRadio] = useState('');
 
     // Event
     const clickOnRadio = () => {
@@ -22,12 +22,13 @@ function App() {
         <form>
             <p>Fruit</p>
             <label>
-                <input type="radio" name="fruit" value="apple" /> Apple
+                <input type="radio" name="fruit" value="apple" onChange={clickOnRadio} /> Apple
             </label>
             <label>
-                <input type="radio" name="fruit" value="banana" /> Banana
+                <input type="radio" name="fruit" value="banana" onChange={clickOnRadio} /> Banana
             </label>
-            <input type="submit" value="Submit" /> <input type="reset" value="Reset" />
+            <input type="submit" value="Submit" />
+            <input type="reset" value="Reset" />
         </form>
     );
 }
