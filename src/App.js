@@ -27,6 +27,9 @@ function App() {
             <label>
                 <input type="radio" name="fruit" value="banana" onChange={clickOnRadio} /> Banana
             </label>
+            <label>
+                <input type="radio" name="fruit" value="grape" onChange={clickOnRadio} /> grape
+            </label>
             <input type="submit" value="Submit" />
             <input type="reset" value="Reset" />
         </form>
