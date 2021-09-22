@@ -4,9 +4,11 @@ import './App.css';
 function App() {
     const [age, setAge] = useState(false);
     const [laptop, setLaptop] = useState(false);
+    const [fruit, setFruit] = useState('');
 
     const onChange = (e) => setAge(e.target.value);
     const onCheck = (e) => setLaptop(e.target.value);
+    const onFruit = (e) => setFruit(e.target.value);
 
     useEffect(() => {
         console.log(age);
@@ -15,6 +17,10 @@ function App() {
     useEffect(() => {
         console.log(laptop);
     }, [laptop]);
+
+    useEffect(() => {
+        console.log(fruit);
+    }, [fruit]);
 
     return (
         <form className="App">
@@ -31,6 +37,27 @@ function App() {
             <input type="checkbox" name="laptop" value="MacBookPro" onChange={onCheck} /> MacBook Pro <br />
             <input type="checkbox" name="laptop" value="GalaxyBook" onChange={onCheck} /> MacBook Air <br />
             <input type="checkbox" name="laptop" value="MacBookAir" onChange={onCheck} /> MacBook Air <br />
+            <input type="submit" />
+            <input type="reset" />
+            <hr />
+            <select name="fruit" onChange={onFruit}>
+                <option value="Apple" name="fruit">
+                    apple
+                </option>
+                <option value="Banana" name="fruit">
+                    banana
+                </option>
+                <option value="Kiwi" name="fruit">
+                    kiwi
+                </option>
+                <option value="Grape" name="fruit">
+                    grape
+                </option>
+                <option value="Melon" name="fruit">
+                    melon
+                </option>
+            </select>
+            <br />
             <input type="submit" />
             <input type="reset" />
         </form>
