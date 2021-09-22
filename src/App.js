@@ -6,6 +6,10 @@ function App() {
 
     const onTextArea = (e) => setTextArea(e.target.value);
 
+    useEffect(() => {
+        console.log(textArea);
+    }, [textArea]);
+
     return (
         <form className="App">
             <h1>TextArea</h1>
