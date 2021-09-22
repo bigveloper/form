@@ -12,6 +12,7 @@ function App() {
     }, [mac]);
     return (
         <form>
+            <h1>What do you want to Mac series</h1>
             <input type="radio" name="mac" value="MacBook Air" onChange={onChange} /> MacBook Air <br />
             <input type="radio" name="mac" value="MacBook pro" onChange={onChange} /> MacBook pro <br />
             <input type="radio" name="mac" value="Mac mini" onChange={onChange} /> Mac mini <br />
