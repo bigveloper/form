@@ -24,6 +24,7 @@ function App() {
             <input type="radio" name="age" value="30" onChange={onChange} /> 30대 <br />
             <input type="radio" name="age" value="40" onChange={onChange} /> 40대 <br />
             <input type="submit" />
+            <input type="reset" />
             <hr />
             <h1> What do you wnat to Laptop </h1>
             <input type="checkbox" name="laptop" value="MacBookAir" onChange={onCheck} /> MacBook Air <br />
@@ -31,6 +32,7 @@ function App() {
             <input type="checkbox" name="laptop" value="GalaxyBook" onChange={onCheck} /> MacBook Air <br />
             <input type="checkbox" name="laptop" value="MacBookAir" onChange={onCheck} /> MacBook Air <br />
             <input type="submit" />
+            <input type="reset" />
         </form>
     );
 }
