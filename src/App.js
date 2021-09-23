@@ -12,9 +12,11 @@ function App() {
     return (
         <form>
             <h1> what is your favorite Camera brand</h1>
-            <input type="radio" name="camera" value="Sony" onChange={onChange} /> Sony
-            <input type="radio" name="camera" value="Cannon" onChange={onChange} /> Cannon
-            <input type="radio" name="camera" value="Nikon" onChange={onChange} /> Nikon
+            <input type="radio" name="camera" value="Sony" onChange={onChange} /> Sony <br />
+            <input type="radio" name="camera" value="Cannon" onChange={onChange} /> Cannon <br />
+            <input type="radio" name="camera" value="Nikon" onChange={onChange} /> Nikon <br />
+            <input type="submit" />
+            <input type="reset" />
         </form>
     );
 }
