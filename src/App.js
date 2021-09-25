@@ -13,6 +13,27 @@ function App() {
         setList((prevState) => [...prevState, value]);
         setValue('');
     };
+    const onEdit = (index) => {
+        const editText = prompt();
+        setList((prevState) => {
+            const editList = prevState.map((item, i) => {
+                return i === index ? editText : item;
+            });
+            return editList;
+        });
+    };
+
+    const onDelete = (index) => {
+        setList((prevState) => {
+            const deleteList = prevState.filter((item, i) => {
+                return i !== index && item;
+            });
+            return deleteList;
+        });
+    };
+    useEffect(() => {
+        console.log(value);
+    }, [value]);
 
     useEffect(() => {
         console.log(value);
@@ -26,6 +47,8 @@ function App() {
             {list.map((item, index) => (
                 <div key={index}>
                     <input value={item} readOnly />
+                    <button onClick={() => onEdit(index)}>Edit</button>
+                    <button onClick={() => onDelete(index)}>Delete</button>
                 </div>
             ))}
         </div>
